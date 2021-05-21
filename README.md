@@ -7,7 +7,7 @@ Collection of scaffolding templates
 - Goal is to completely extract and separate business logic from the API
 - Business logic should not be present in routes or controllers
 
-#### File Structure
+### File Structure
 
 ```
 src
@@ -22,7 +22,7 @@ src
 └───test            # Tests go here
 ```
 
-#### 3-Layer Architecture
+### 3-Layer Architecture
 
 1. Controllers receive incoming client requests, and they leverage services
 2. Services contain all business logic, and can also make calls to the data access layer
@@ -31,7 +31,7 @@ src
 5. The service layer can then hand everything back to the controller
 6. The controller can then respond to the client!
 
-#### Service Layer
+### Service Layer
 
 The Service Layer SHOULD:
 
@@ -46,7 +46,7 @@ The Service Layer SHOULD NOT:
 - Provide anything related to HTTP Transport layer; status codes, headers, etc.
 - Directly interact with the database
 
-#### Controller Layer
+### Controller Layer
 
 - Responsible for handling client requests and responses
 - Leverage services by passing the data that they need, not the `req` or `res` object themselves
