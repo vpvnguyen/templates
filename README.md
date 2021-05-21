@@ -51,3 +51,13 @@ The Service Layer SHOULD NOT:
 - Responsible for handling client requests and responses
 - Leverage services by passing the data that they need, not the `req` or `res` object themselves
 - Enables our services to remain framework agnostic
+
+### Loaders
+
+- Abstract all application startup processes
+- Allows ease to remove/replace the framework later
+- Allows ease of debugging
+
+### Application Configurations
+
+- Holds all application configuration parameters
