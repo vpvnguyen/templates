@@ -5,7 +5,7 @@ Collection of scaffolding templates
 ## Nodejs Service Architecture
 
 - Goal is to completely extract and separate business logic from the API
-- Business logic should not be present in routes or controllers
+- Business logic should not be present in `routes` or `controllers`
 
 ### File Structure
 
@@ -29,20 +29,20 @@ src
 3. The data access layer interacts with the database by performing queries
 4. Results are passed back up to the service layer
 5. The service layer can then hand everything back to the controller
-6. The controller can then respond to the client!
+6. The controller then responds to the client
 
 ### Service Layer
 
 The Service Layer SHOULD:
 
 - Contain business logic
-- Leverage the data access layer to interact with the database
+- Leverage the `DAL` (data access layer) to interact with the database
 - Be framework agnostic
 
 The Service Layer SHOULD NOT:
 
-- Be provided the req or res objects
-- Handle responding to clients
+- Be provided the `req` or `res` objects
+- Response to client
 - Provide anything related to HTTP Transport layer; status codes, headers, etc.
 - Directly interact with the database
 
