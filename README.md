@@ -27,7 +27,7 @@ src
 1. Controllers receive incoming client requests, and they leverage services
 2. Services contain all business logic, and can also make calls to the data access layer
 3. The data access layer interacts with the database by performing queries
-4. Results are passed back up to the service layer.
+4. Results are passed back up to the service layer
 5. The service layer can then hand everything back to the controller
 6. The controller can then respond to the client!
 
