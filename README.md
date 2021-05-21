@@ -24,6 +24,10 @@ src
 
 ### 3-Layer Architecture
 
+Start -> Configure -> Load -> Listen
+
+Request -> Router -> Middleware -> Controller -> Service -> Database -> Controller -> Response
+
 1. Controllers receive incoming client requests, and they leverage services
 2. Services contain all business logic, and can also make calls to the data access layer
 3. The data access layer interacts with the database by performing queries
@@ -31,7 +35,7 @@ src
 5. The service layer can then hand everything back to the controller
 6. The controller then responds to the client
 
-### Service Layer
+### Service Layer (Services)
 
 The Service Layer SHOULD:
 
@@ -46,7 +50,11 @@ The Service Layer SHOULD NOT:
 - Provide anything related to HTTP Transport layer; status codes, headers, etc.
 - Directly interact with the database
 
-### Controller Layer
+### Data Access Layer (Models)
+
+- Interacts and queries database
+
+### Controller Layer (Controllers)
 
 - Responsible for handling client requests and responses
 - Leverage services by passing the data that they need, not the `req` or `res` object themselves
